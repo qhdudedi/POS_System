@@ -29,7 +29,7 @@ body{
     justify-content: center;
 }
 #cart-content{
-  diplay:flex;
+  display:flex;
   width:600px;
   border-radius: 8px;
   background-color: white;
@@ -37,7 +37,7 @@ body{
   padding :30px;
 }
 #cart-container{
-  diplay:flex;
+  display:flex;
   width: 1500px;
   border-radius: 8px;
   background-color: white;
@@ -69,7 +69,7 @@ input{
     padding: 60px 80px;
     width: 600px;
     justify-content: center;
-    align-item:center;
+    align-items: center;
 }
 #input-container{
   width: 600px;

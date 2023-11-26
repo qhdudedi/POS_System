@@ -19,17 +19,11 @@ public class ItemService {
         return itemDao.selectAll();
     }
 
-    public Item findById(Long id){
-        return itemDao.selectById(id);
-    }
 
     public List<Item>findByItemId(String itemId){return itemDao.findByItemId(itemId);}
 
     public Item findByCode(String itemId){
         return itemDao.selectByItemId(itemId);
-    }
-    public void update(Item item){
-        itemDao.update(item);
     }
     public void updateList(String itemId, int quantity){
         Item item = itemDao.selectByItemId(itemId);
