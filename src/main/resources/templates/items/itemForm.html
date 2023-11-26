@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>상품등록</title>
+    <link href="/css/item.css" rel="stylesheet"/>
+</head>
+<header>
+    <h2><a href="/">편의점 POS</a></h2>
+</header>
+<body>
+<div class="container">
+    <div class="body-container">
+        <div id="input-container">
+            <form method="post" role="form" th:action="@{/items/new}" th:object="${itemForm}">
+                <div class="form-group">
+                    <label th:for="itemId">상품코드</label>
+                    <input class="form-control" placeholder="상품코드를 입력하세요" th:field="*{itemId}" type="text"/>
+                </div>
+                <div class="form-group">
+                    <label th:for="name">상품명</label>
+                    <input class="form-control" placeholder="이름을 입력하세요" th:field="*{name}" type="text"/>
+                </div>
+                <div class="form-group">
+                    <label th:for="price">상품가격</label>
+                    <input class="form-control" placeholder="상품가격을 입력하세요" th:field="*{price}" type="number"/>
+                </div>
+                <div class="form-group">
+                    <label th:for="quantity">상품수량</label>
+                    <input class="form-control" placeholder="상품수량을 입력하세요" th:field="*{quantity}" type="number"/>
+                </div>
+                <div class="form-group">
+                    <button type="submit">상품등록</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

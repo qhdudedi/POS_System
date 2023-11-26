@@ -1,0 +1,191 @@
+body{
+    background-color:#E9EEF5;
+    justify-content: center;
+    align-items : center;
+}
+
+.container{
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items : center;
+}
+.body-container{
+    display: flex;
+    height: 600px;
+    width: 600px;
+    margin : 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px gainsboro;
+    background-color: white;
+    justify-content: center;
+}
+.body-content{
+    display: flex;
+    margin : 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px gainsboro;
+    background-color: white;
+    justify-content: center;
+}
+#cart-content{
+  diplay:flex;
+  width:600px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 0 20px gainsboro;
+  padding :30px;
+}
+#cart-container{
+  diplay:flex;
+  width: 1500px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 0 20px gainsboro;
+  justify-content:space-between;
+}
+.edit-container {
+  display: flex;
+    margin: 100px;
+    padding :100px;
+    width: 600px;
+}
+label{
+  width: 80px;
+  margin:20px;
+  padding :10px;
+}
+input{
+    display :block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #E5E9F5;
+    background-color: #F6F7FA;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+}
+.list-container{
+    padding: 60px 80px;
+    width: 600px;
+    justify-content: center;
+    align-item:center;
+}
+#input-container{
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items : center;
+
+}
+#input-container label{
+  width: 80px;
+  margin:20px;
+  padding :10px;
+}
+#input-container input {
+    display :block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #E5E9F5;
+    background-color: #F6F7FA;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+.item-container{
+    float:left;
+    width:600px;
+    border-radius: 10px;
+    background-color: #E9EEF5;
+    margin-left : 10px;
+}
+.sale-content{
+    margin : 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px gainsboro;
+    background-color: white;
+    justify-content: center;
+}
+.sale-container{
+  margin : 10px;
+}
+.sale-container input{
+    display :inline-block;
+    border: 1px solid #E5E9F5;
+    background-color: #F6F7FA;
+    padding: 10px 10px;
+    margin :5px;
+    border-radius: 10px;
+}
+.form-group{
+  width: 500px;
+   display: flex;
+    justify-content: center;
+    align-items : center;
+}
+table{
+  width: 100%;
+  border-top: 1px solid #444444;
+  border-collapse: collapse;
+}
+th, td{
+  border-bottom: 1px solid #444444;
+  border-left : 1px solid #444444;
+  padding : 10px;
+  text-align : center;
+}
+th:first-child, td:first-child {
+    border-left: none;
+}
+span{
+    padding: 20px;
+    display :inline-block;
+    margin-top: 10px;
+}
+p{
+  font-weight : bold;
+  float: right;
+}
+button[type="button"] {
+    margin : 20px;
+    padding: 10px 20px;
+    background-color: #dce9fc;
+    border:1px;
+    border-color:#E9EEF5;
+    border-radius: 5px;
+    border-style: ridge;
+    float: right;
+}
+button[type="button"]:hover{
+  background-color:white;
+}
+button[type="submit"] {
+    margin : 20px;
+    padding: 10px 20px;
+    background-color: white;
+    border:1px;
+    border-style: ridge;
+    border-radius: 5px;
+    /**justify-content: center;*/
+    float: right;
+}
+button[type="submit"]:hover {
+    background-color: #E9EEF5;
+}
+h1{
+  text-align:center;
+}
+.btn{
+    background-color: white !important;
+}
+.btn:hover{
+  background-color: #E9EEF5;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+a:hover,a:focus {
+    text-decoration: underline;
+}
