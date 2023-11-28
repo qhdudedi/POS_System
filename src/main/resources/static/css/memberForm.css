@@ -1,0 +1,68 @@
+body {
+    background-color: #F3F4F9;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+#form-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-inner-container {
+    background-color: white;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px gainsboro;
+}
+
+#sign-up-container {
+    padding: 60px 80px;
+    width: 600px;
+
+}
+#input-container input {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #E5E9F5;
+    background-color: #F6F7FA;
+    padding: 20px;
+    border-radius: 10px;
+    width: 93%
+}
+h3 {
+    color: #124265;
+    font-size: 200%;
+    font-weight: 200;
+}
+
+label {
+    color: #124265;
+    font-weight : bold;
+}
+::placeholder {
+    color: #C0C7DB;
+    font-size: larger;
+    letter-spacing: 1.2px;
+}
+button[type="submit"] {
+    padding: 15px 50px;
+    background-color: #124265;
+    border-radius: 10px;
+    color: white;
+    float: right;
+}
+
+button[type="submit"]:hover {
+    background-color: #00094f;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+a:hover,a:focus {
+    text-decoration: underline;
+}
