@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>상품 판매 </title>
+    <link href="/css/item.css" rel="stylesheet"/>
+</head>
+<header>
+    <h2><a href="/">편의점 POS</a></h2>
+</header>
+<body>
+<div class="container">
+    <div id = "cart-content">
+        <h2> 계산 품목</h2>
+        <div class = "cart-container">
+            <table>
+                <thead>
+                <tr>
+                    <th>상품명</th>
+                    <th>상품 가격</th>
+                    <th>상품 수량</th>
+                    <th>금액</th>
+                </tr>
+                <thead>
+                <tbody>
+                <tr th:each="sale : ${saleList}" >
+                    <td th:text = "${sale.getName()}">
+                    <td th:text = "${sale.getPrice()}">
+                    <td th:text = "${sale.getQuantity()}">
+                    <td th:text = "${sale.getTotalPrice()}">
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="total-container">
+            <p th:text = "|계산할 금액 : ${total}|" >325000</p>
+        </div>
+    </div>
+</div>
+</body>

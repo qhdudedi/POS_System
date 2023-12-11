@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>상품 재고 업데이트</title>
+    <link href="/css/item.css" rel="stylesheet"/>
+</head>
+<header>
+    <h2><a href="/">편의점 POS</a></h2>
+</header>
+<body>
+<div class="container">
+    <div class="body-container">
+        <div id="edit-container" th:each="item : ${foundItem}">
+            <h2> 상품 재고 수정 </h2>
+            <form method="post" th:action="@{/items/update/{itemId}(itemId=${item.itemId})}" th:object="${foundItem}">
+                <div class="form-group">
+                    <label th:for="itemId">상품코드</label>
+                    <input class="form-control" readonly th:field="*{itemId}" type="text"/>
+                </div>
+                <div class="form-group">
+                    <label th:for="quantity">추가할<br>상품 수량 </label>
+                    <input class="form-control" placeholder="추가할 상품수량을 입력하세요" th:field="*{quantity}" type="number" />
+                </div>
+                <div class="form-group">
+                    <button th:onclick="|location.href='@{/items/list}'|" type="button"> 취소</button>
+                    <button type="submit">상품 수정</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

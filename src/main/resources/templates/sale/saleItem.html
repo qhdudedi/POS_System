@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>계산 </title>
+    <link href="/css/item.css" rel="stylesheet"/>
+</head>
+<header>
+    <h2><a href="/">편의점 POS</a></h2>
+</header>
+<body>
+<div class="container">
+    <div class="sale-content">
+        <h1>계산 품목</h1>
+        <div class="sale-container" th:each="item : ${itemList}">
+            <form method="post" th:action="@{/sale/order}" target="input">
+                <input hidden id="itemId" name="itemId" th:value="${item.getItemId()}" type="text">
+                <input id="name" name="name" th:value="${item.getName()}" type="text">
+                <input id="quantity" name="quantity" placeholder="수량을 입력하세요." required
+                       th:max="${item.getQuantity()}" type="number">
+                <input class=btn type="submit" value="장바구니추가">
+            </form>
+            <iframe name="input" style="display:none";></iframe>
+        </div>
+        <button  th:onclick="|location.href='@{/sale/order}'|" type="submit" >계산하기</button>
+    </div>
+</div>
+</body>
+</html>
