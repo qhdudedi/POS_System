@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>상품 통계</title>
+    <link href="/css/static.css" rel="stylesheet"/>
+</head>
+<header>
+    <h2><a href="/">편의점 POS</a></h2>
+</header>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <div class="stat-container">
+            <div class="form-group">
+                <h2>일별 판매 액수</h2>
+                <form method="get" th:action="@{/sale/day}">
+                    <input name="date" type="date">
+                    <button type="submit">확인</button>
+                </form>
+            </div>
+            <div class="form-group">
+                <h2>주별 판매 액수</h2>
+                <form method="get" th:action="@{/sale/weekly}">
+                    <input name="startDate" type="date">
+                    <button type="submit">확인</button>
+                </form>
+            </div>
+            <div class="form-group">
+                <h2>월별 판매 액수</h2>
+                <form method="get" th:action="@{/sale/monthly}">
+                    <input name="yearMonth" type="month">
+                    <button type="submit">확인</button>
+                </form>
+            </div>
+            <div class="form-group">
+                <h2>일별 판매 물품 목록</h2>
+                <form method="get" th:action="@{/sale/dailyItem}">
+                    <input name="date" type="date">
+                    <button type="submit">검색</button>
+                </form>
+            </div>
+            <div class="form-group">
+                <h2>주간 판매 물품 목록</h2>
+                <form method="get" th:action="@{/sale/weeklyItem}">
+                    <input name="startDate" type="date">
+                    <button type="submit">검색</button>
+                </form>
+            </div>
+            <div class="form-group">
+                <h2>월간 판매 물품 목록</h2>
+                <form method="get" th:action="@{/sales/monthly}">
+                    <input name="yearMonth" type="month">
+                    <button type="submit">검색</button>
+                </form>
+            </div>
+            <div class="form-group" >
+                <a href="/static/popularItem"><h2>최다 판매 물품 목록</h2></a>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <h1>물품 판매 정보</h1>
+        <h3>판매된 상품 수 <span th:text="${totalSales}"></span></h3>
+        <table>
+            <thead>
+            <tr>
+                <th>Sale ID</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Date/Time</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="sale : ${salesList}">
+                <td th:text="${sale.saleId}"></td>
+                <td th:text="${sale.price}"></td>
+                <td th:text="${sale.quantity}"></td>
+                <td th:text="${sale.dateTime}"></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+</body>
+</html>
